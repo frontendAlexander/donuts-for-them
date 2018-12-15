@@ -1,8 +1,16 @@
 .row {
 	max-width: $grid-width;
 	margin: 0 auto;
+
 	&:not(:last-child){
 		margin-bottom: $gutter-vertical;
+
+		@include respond(tab-portable){
+			margin-bottom: $gutter-vertical-small;	
+		}
+	}
+	@include respond(tab-portable){
+		//max-width: 50rem;	
 	}
 	@include clearfix;
 
@@ -11,6 +19,14 @@
 		
 		&:not(:last-child){
 			margin-right: $gutter-horizontal;
+
+			@include respond(tab-portable){
+				margin-right: 0;
+				margin-bottom: $gutter-vertical-small;
+			}
+		}
+		@include respond(tab-portable){
+			//width: 100% !important;
 		}
 	}
 	.col-1-of-2 {

@@ -6,5 +6,21 @@
 	box-sizing: inherit;
 }
 html {
-	font-size:10px;
+	font-size:62.5%; //1 rem = 10px; 10px/16px = 62.5%; 
+
+	@include respond(tab-portable){
+		font-size: 50%;	// 1rem = 8px; 8px/16px = 50%; 
+ 	}
+	@include respond(tab-landscape){
+		font-size: 56.25%; // 1rem = 9px; 9px/16px = 56%;
+	}
+	@include respond(phone){
+		font-size: 30%; // 1rem = 4.8px; 4.8px/16px = 30%;
+	}
+	@include respond(big-desktop){
+		font-size: 81%;	// 1rem = 12; 13/16 = 81%;
+	}
+}
+body {
+	box-sizing: border-box;
 }
