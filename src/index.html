@@ -40,17 +40,67 @@
   </div>
 </nav>
 <main>
-  <p style="color:black; padding-top:40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <section class="slider">
+    <div class="discont">
+      <button class="discont__arrow discont__arrow--left"><a href="#i1"></a></button>
+      <div class="discont__wrapper">
+        <div class="discont-left">
+          <div class="slider-body">
+          <picture>
+            <source srcset="
+                public/images/photo-slider-donuts-for-them.jpg 600w,
+                public/images/photo-slider-large-donuts-for-them.jpg 1200w"
+              sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1280px) 100vw,
+                600px"
+              type="image/jpg">
+            <img src="public/image/photo-slider-donuts-for-them.jpg" alt="Бургер" class="card__image" id="i1">
+          </picture>
+          <picture>
+            <source srcset="
+                public/images/photo-slider-donuts2-for-them.jpg 600w,
+                public/images/photo-slider-large-donuts2-for-them.jpg 1200w"
+              sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1280px) 100vw,
+                600px"
+              type="image/jpg">
+            <img src="public/images/photo-slider-donuts2-for-them.jpg" alt="Бургер" class="card__image" id="i2">
+          </picture>
+          <picture>
+            <source srcset="
+                public/images/photo-slider-donuts3-for-them.jpg 600w,
+                public/images/photo-slider-large-donuts3-for-them.jpg 1200w"
+              sizes="
+                (max-width: 600px) 100vw,
+                (max-width: 1280px) 100vw,
+                600px"
+              type="image/jpg">
+            <img src="public/images/photo-slider-donuts3-for-them.jpg" alt="Бургер" class="card__image" id="i3">
+          </picture>
+          </div>
+        </div>
+        <div class="discont-right">
+          <h1 class="discont-right__title">Оглавление</h1>
+          <p class="discont-right__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua</p>
+          <div class="discont__promo-background"></div>
+        </div>
+      </div>
+      <div class="discont__button">
+        <button class="btn"><a class="btn__text" href="#">Заказать</a></button>
+      </div>
+      <div class="discont__promo">Акция</div>
+      <button class="discont__arrow discont__arrow--right"><a href="#i2"></a></button>
+    <div class="slider__dots">
+      <div class="dots-box">
+        <button class="dots-box__dot"><a href="#i1">1</a></button>
+        <button class="dots-box__dot"><a href="#i2">2</a></button>
+        <button class="dots-box__dot"><a href="#i3">3</a></button>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="footer">
   <div class="footer__nav">

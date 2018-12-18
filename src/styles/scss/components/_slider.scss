@@ -1,0 +1,230 @@
+.slider {
+	display: table;
+	height: auto;
+	width: 100%;
+	position: relative;
+	background-color: white;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	margin-top: 8rem;
+	@include respond(tab-portable){
+    	padding-left: 0;
+		padding-right: 0;
+		margin-top: 0;
+	}
+	.discont {
+		background-color: white;
+		margin: 0 auto;
+		height: 100%;
+		width: 100%;
+		border-radius: 3%;
+		overflow: hidden;
+		z-index: 1;
+		
+		&__arrow {
+			height: 4rem;
+			width: 4rem;
+			position: absolute;
+			background-color: $dark-green;
+			top: 50%;
+			border: none;
+			a {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			}
+			&--left {
+				left: 1rem;
+				border-radius: 50%;
+				z-index: 2;
+				&:before {
+					content: '<';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			&--right {
+				right: 1rem;
+				border-radius: 50%;
+				z-index: 2;
+				&:before {
+					content: '>';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					border-radius: 50%;
+				}
+			}
+		}
+		&__promo-background {
+			left: 70%;
+		    position: absolute;
+		    color: black;
+		    top: -10%;
+		    background-color: yellow;
+		    font-size: 1.3rem;
+		    width: 25%;
+		    padding-left: 25%;
+		    height: 4rem;
+		    padding-top: 25%;
+		    transform: rotate(45deg);
+		    padding-right: 25%;
+		}
+		&__promo {
+			color: black;
+		    position: absolute;
+		    z-index: 2;
+		    font-size: 1.2rem;
+		    background-color: transparent;
+		    height: 4rem;
+		    width: 6rem;
+		    top: 0;
+		    right: 0;
+		    padding-top: 4%;
+		    padding-bottom: 0%;
+		    padding-left: 0%;
+		    transform: rotate(43deg);
+		    @include respond(phone){
+		    	padding-top: 2%;
+			    padding-bottom: 0%;
+			    padding-left: 4%;
+			    font-size: 2rem;
+			}
+		}
+		&__wrapper {
+			display: table;
+			position: relative;
+			padding-bottom: 1.7rem;
+		}
+	}
+	.discont-left{
+		display: table-cell;
+		width: 52%;
+		position: relative;
+		vertical-align: top;
+		.slider-body {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background-color: black;
+			.card__image{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				transition: all ease 1s; 
+				opacity: 0;
+			}
+			.card__image:target {
+				opacity: 1;
+			}
+			.card__image#i1 {
+				opacity: 1;
+			}
+		}
+	}
+	.discont-right{
+		display: table-cell;
+		height: auto;
+		position: relative;
+		width: 48%;
+		vertical-align: top;
+		background-color: #9ff9a3;
+		&__title {
+			color: black;
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: bold;
+			font-size: 1.6rem;
+			padding-top: 4.1rem;
+			padding-bottom: 7.6rem;
+		}
+		&__text {
+			min-height: 20rem;
+			height: 100%;
+			width:100%;
+			color: black;
+			font-size: 1.8rem;
+			overflow: hidden;
+		}
+	}
+	.discont__button {
+		height: 5.5rem;
+		min-width: 33rem;
+		bottom: 5rem;
+		left: 73rem;
+		right: 14rem;
+	    position: absolute;
+	    @include respond(tab-landscape){
+    	    left: 60%;
+			bottom: 5rem;
+		}
+	    @include respond(tab-portable){
+	    	display: block;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+		}
+	    @include respond(phone){
+			display: block;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+		}
+		.btn {
+			height: 100%;
+			width: 100%;
+			color: white;
+			background-color: $red;
+			border-radius: 2px;
+			border: none;
+			&__text {
+				color: white;
+				font-size: 1.6rem;
+				text-decoration: none;
+			}
+		}
+	}
+	.slider__dots {
+		position: absolute;
+		width: 200px;
+		height: 10px;
+		left: 50%;
+		transform: translate(-50%);
+		z-index: 2;
+		bottom:0;
+		@include respond(tab-portable){
+	    	display: none;
+		}
+		@include respond(phone){
+			display: none;
+		}
+		.dots-box {
+			display: table;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			margin:0 auto;
+			&__dot {
+				display: table-cell;
+				height: 2rem;
+				width: 2rem;
+				z-index: 3;
+				border: none;
+				background-color: $dark-green;
+				border-radius: 50%;
+				margin-right: 3.5rem;
+				a {
+					opacity: 0;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
