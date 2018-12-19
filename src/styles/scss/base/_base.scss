@@ -24,3 +24,44 @@ html {
 body {
 	box-sizing: border-box;
 }
+.satelite {
+	display: table;
+	padding-left: 2.7rem;
+	paddong-right: 2.7rem;
+	
+	.section-menu{
+		@include respond(phone){
+			display: table-row;
+			height: auto;
+			 
+		}
+	}
+	.section-about{
+		@include respond(phone){
+			display: table-header-group;
+			&__left {
+				display: table-row;
+			}
+			&__right {
+				display: table-row;
+			}
+
+		}
+	}
+	.section-contents{
+		@include respond(phone){
+			display: table-footer-group;
+			padding-bottom: 7.7rem;
+			&__left {
+				display: table-row;
+			}
+			&__right {
+				display: table-row;
+				
+				.right-btn {
+					display: none;
+				}
+			}
+		}
+	}
+}

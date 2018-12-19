@@ -1,0 +1,86 @@
+.section-contents {
+	display: flex;
+	height: 30rem;
+	flex-wrap: wrap;
+	flex-direction: column;
+	color: black;
+	margin-bottom: 11rem;
+	&__title {
+		display: block;
+		font-size: 1.7rem;
+		&--left {
+			padding-top: 4.7rem;
+			padding-bottom: 4.6rem;
+		}
+		&--right {
+			padding-top: 4.7rem;
+			padding-bottom: 3.8rem;
+		}
+	}
+	&__left {
+		display: table-cell;
+		list-style: none;
+		list-style-type: none;
+		width: 25%;
+		padding-left: 3rem;
+		margin-right: 7.8rem;
+		.list {
+			list-style: none;
+    		list-style-type: none;
+    		padding-bottom: 5.2rem;
+    		&__item {
+    			&:not(:last-child){
+					padding-bottom: 1.6rem;
+				}
+    		}
+    	}
+    	.left-btn {
+    		height: 5.5rem;
+			width: 100%;
+			border-radius: 20px;
+			border: none;
+			background-color: yellow;
+			max-width: 29rem;
+    	}
+	}
+	&__right {
+		display: table-cell;
+		width: 75%;
+		.photo-container {
+			max-height: 20rem;
+			@include respond(phone){
+			.Grid-item {
+				display: none;
+				&:not(:last-child){
+					 display: block;
+				}
+				}
+			}
+			&__image {
+				display: block;
+				max-width: 14rem;
+		        width: 100%;
+		        max-width: 100%;
+		    }
+		}
+		.right-btn {
+    		height: 5.5rem;
+    		width: 100%;
+			max-width: 33rem;
+			border-radius: 20px;
+			border: 1px solid black;
+			background-color: transparent;
+			position: relative;
+			&:before {
+			  content: "__";
+			  height: 20px;
+			  width: 20px;
+			  border: 1px solid black;
+			  position: absolute;
+			  left: 20%;
+			  top: 28%;
+			}
+    	}
+
+	}
+}

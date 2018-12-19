@@ -3,17 +3,33 @@
 	flex-direction: column;
 	position: relative;
 	background-color: white;
-	padding-bottom: 13.5rem;
 	padding-top: 9rem;
 	padding-left: 3rem;
     padding-right: 3rem;
 	text-align: center;
-	@media (max-width: 420px) {
+	@include respond(phone){
+		.Grid--hide {
+			display: none;
+			}
+		}
+	
+	@include respond(phone){
 		height: 125rem;
 		padding-top: 3.9rem;
 		.heading-secondary {
 			font-size: 1.8rem;
 			padding-bottom: 5.5rem;
+		}
+	}
+	&__title {
+		display: none;
+		@include respond(phone){
+			display: block;
+			text-align: center;
+			width: 100%;
+			color: black;
+			font-size: 1.5rem;
+			padding-top: 6.6rem;
 		}
 	}
 	.card {
@@ -96,6 +112,87 @@
 			border: none;
 			border-bottom-left-radius: 20px;
     		border-bottom-right-radius: 20px;
+		}
+	}
+	&__bottom {
+		padding-top: 3.5rem;
+		.container {
+			height: 5.2rem;
+			position: relative;
+			.show {
+				display: inline-block;
+				padding-top: 1.6rem; 
+				padding-right: 3.3rem;
+				height: 100%;
+				border: 1px solid black;
+				border-radius: 20px;
+				max-width: 32rem;
+				color: black;
+				float: left;
+				&__icon {
+					float: left;
+					padding-left: 3rem;
+				}
+				&__text {
+					float: left;
+					padding-left: 3.5rem;
+				}
+				@include respond(tab-landscape){
+			    	display: none;
+				}
+			}
+			.search {
+				display: inline-block;
+				height: 5.5rem;
+				max-width: 78rem;
+				color: black;
+				width: 100%;
+				float: right;
+				.container {
+					display: inline-block;
+					height: 5.5rem;
+				}
+				.search-group {
+					width: 100%;
+					display: inline-flex;
+					justify-content: flex-end;
+					position: relative;
+					flex-wrap: wrap;
+					@include respond(phone){
+						flex-direction: row-reverse;
+					}
+				}
+				&__title {
+					font-size: 1.3rem;
+					float: left;
+					padding-top: 20px;
+					padding-right: 1.7rem;
+					@include respond(phone){
+						text-align: left;
+						padding-top: 0;
+						padding-right: 0;
+						width: 100%;
+					}
+				}
+				&__field {
+					@include respond(phone){
+						max-width: 29rem;
+					}
+				}
+				&__input {
+					height: 100%;
+					border: 1px solid black;
+				}
+				&__send {
+					height: 100%;
+					background-color: $dark-green;
+					width: 7rem;
+					height: 5.2rem;
+					float: right;
+					border: none;
+				}
+			}
+		
 		}
 	}
 

@@ -1,0 +1,24 @@
+.section-about {
+	display: table;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	margin-bottom: 8rem;
+	font-size: 1.3rem;
+	color: black;
+	margin-top: 100px;
+	padding-top: 100px;
+	&__title {
+		display: table-row;
+		padding-bottom: 6rem;
+		text-align: center;
+	}
+	&__left {
+		color: black;
+		display: table-cell;
+		padding-right: 5.8rem;
+	}
+	&__right {
+		color: black; 
+		display: table-cell;
+	}
+}
