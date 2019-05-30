@@ -75,6 +75,10 @@
 			padding-left: 12rem;
 			padding-top: .5rem;
 			width: 100%;
+			img {
+				max-height: 10px;
+				object-fit: contain;
+			}
 			@include respond(tab-portable){
 				padding-left: 0;
 			}

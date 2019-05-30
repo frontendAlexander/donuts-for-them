@@ -16,6 +16,7 @@
 				font-size: 5.7rem;
 			}
 		}
+		
 		&__list {
 			display: flex;
 			flex-direction: column;
@@ -37,14 +38,20 @@
 					grid-auto-flow: column;
 				}
 				&__item {
+					color: white;
 					display: inline-block;
 					margin: 0 1rem;
+					a {
+						color: white;
+					}
 					@include respond(phone){
 						width: 100%;
 					}
 				}
+
 			}
 		}
+		
 		&__telephone {
 			display: block;
 			padding-top: 5rem;
@@ -60,17 +67,22 @@
 			padding-top: 4.8rem;
 			padding-left: 2.9rem;
 			@include respond(phone){
-				padding-top: 5.5rem;
-				padding-left: .8rem;
+				//padding-top: 5.5rem;
+				//padding-left: .8rem;
 			}
 			&__icon {
 				display: table-cell;
-				width: 50%;
-				background-color: white;
+				position: relative;
+				width: 35%;
+			}
+			&__burger {
+				display: table-cell;
+				position: relative;
+				width: 35%;
 			}
 			&__sum {
 				display: table-cell;
-				width: 50%;
+				width: 35%;
 				padding-left: 2.3rem;
 				.text {
 					font-size: 1.1rem;
@@ -79,19 +91,126 @@
 					font-size: 1.6rem;
 				}
 			}
-		}
-		&__burger {
-			display: none;
-			height: 20px;
-			width: 20px;
-			background-color: red;
-			@include respond(phone){
-				display: block;
+			&__toggle {
+				display: none;
+			    position: absolute;
+			    border: 0;
+			    background-color: transparent;
+			    font-size: 3rem;
+			    width: 3rem;
+			    height: 5rem;
+			    line-height: 3.4rem;
+			    text-indent: 4rem;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    z-index: 5;
+			    @include respond(phone){
+					display: block;
+				}
+			&::after {
 				position: absolute;
-				top:4.4rem;
-				right:2.9rem;
+				top: 0.2rem;
+				z-index: 0;
+				left: 0.2rem;
+				display: block;
+				content: "\2261";
+				text-indent: 0;
+			}
+			}
+			&__dropdown {
+				display: none;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: 0;
 			}
 		}
 
+	}
+}
+.burger {
+	display: none;
+	@media (max-width: 600px) {
+		display: inline-block;
+	}
+	&__checkbox {
+		visibility: hidden;
+		cursor: pointer;
+		&:checked ~ .burger__background {
+			top: -5rem;
+			visibility: visible;
+			transform: scaleX(80);
+			transform-origin: 50% 50%;
+		}
+		&:checked ~ .burger__nav {
+			opacity: 1;
+			height: 50%;
+			width: 100%;
+		}
+		&:checked ~ .burger-list {
+			opacity: 1;
+		}
+	}
+	&__background {
+		height: 90vh;
+		width: 6rem;
+		visibility: hidden;
+		position: absolute;
+		top: 13.2rem;
+		right: 6.5rem;
+		background-color: #3ca450;
+		z-index: 4;
+		transition: transform .8s;
+	}
+	&__nav {
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right:0;
+		z-index: 4;
+		opacity: 0;
+		width: 0;
+		transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		.burger-list {
+			width: 100%;
+			position: absolute;
+			top: 13.2rem;
+			left: -12rem;
+			&__item {
+				height: 4.1rem;
+				width: 100vw;
+				margin-top: 5.6rem;
+				padding-top: 1.4rem;
+				list-style-type: none;
+				&:hover {
+					background-color: black;
+				}
+			}
+			&__link {
+				&:link,
+				&:visited {
+					display: inline;
+					width: 100%;
+					font-size: 1rem;
+					font-weight: 300;
+					color: white;
+					text-decoration: none;
+					text-transform: uppercase;
+					padding: 1rem 2rem;
+					background-size: 200%;
+					transition: all .4s;
+					span {
+						margin-right: 1.5rem;
+						display: inline-block;
+					}
+				}
+				&:hover,
+				&:active {
+					background-position: 100%;
+					transform: translateX(1rem);
+				}
+			}
+		}
 	}
 }

@@ -1,9 +1,25 @@
+:root {
+	box-sizing: border-box;
+}
 *,
 *::after,
 *::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
+}
+a:link {
+	color: blue;
+	text-decoration: none;
+}
+a:visited {
+	color: purple;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active{
+	color: red;
 }
 html {
 	font-size:62.5%; //1 rem = 10px; 10px/16px = 62.5%; 
@@ -27,7 +43,7 @@ body {
 .satelite {
 	display: table;
 	padding-left: 2.7rem;
-	paddong-right: 2.7rem;
+	padding-right: 2.7rem;
 	
 	.section-menu{
 		@include respond(phone){

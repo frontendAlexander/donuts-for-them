@@ -15,28 +15,45 @@
      <div class="navigation-container__list">
       <ul class="top-nav">
         
-          <li class="top-nav__item">Главная</li>
-          <li class="top-nav__item">Изделия</li>
-          <li class="top-nav__item">Отзывы</li>
-          <li class="top-nav__item">Контакты</li>
+          <li class="top-nav__item"><a href="#">Главная</a></li>
+          <li class="top-nav__item"><a href="#">Изделия</a></li>
+          <li class="top-nav__item"><a href="#">Отзывы</a></li>
+          <li class="top-nav__item"><a href="#">Контакты</a></li>
       
       </ul>
      </div>
      <div class="navigation-container__telephone">+7 (777) 777-77-77</div>
-      <div class="navigation-container__cart">
-        <div class="cart">
+      <div class="cart">
          <div class="cart__icon">
-            <picture>
-              <img src="" class="icon">
-            </picture>
+            <label for="burger-toggle" class="cart__toggle sidebar__button" tabindex="0">Свернуть меню</label>
+            <div class="burger">
+              <input type="checkbox" class="burger__checkbox" id="burger-toggle">
+              <!-- background -->
+              <div class="burger__background"></div>
+              <!-- ---------- -->
+                <div class="burger__nav">
+                  <ul class="burger-list">
+                    <li class="burger-list__item"><a class="burger-list__link" href="#" tabindex="0">Главная</a></li>
+
+                    <li class="burger-list__item"><a class="burger-list__link" href="#" tabindex="0">Изделия</a></li>
+
+                    <li class="burger-list__item"><a class="burger-list__link" href="#" tabindex="0">Отзывы</a></li>
+
+                    <li class="burger-list__item"><a class="burger-list__link" href="#" tabindex="0">Контакты</a></li>
+                  </ul>
+                </div>
+            </div>
          </div>
-         <div class="cart__sum">
+         <div class="cart__burger">
+           <span class="text">Корзина</span>
+         </div>
+        <div class="cart__sum">
            <span class="text">Итого</span>
            <span class="numbers">8.798</span>
          </div>
-       </div>
-      </div>
-      <div class="navigation-container__burger"></div>
+        </div> 
+      </div>   
+    </div>
   </div>
 </nav>
 <main>
@@ -392,19 +409,19 @@
   </div>
   <div class="footer__buttons">
     <div class="credit-cards">
-      <img src="public/images/master.jpg" style="width: 20px; height: 20px" alt="Изображение кредитной карточки">
-      <img src="public/images/visa.jpg" style="width: 20px; height: 20px" alt="Изображение кредитной карточки">
-      <img src="public/images/visa.jpg" style="width: 20px; height: 20px" alt="Изображение кредитной карточки">
-      <img src="public/images/master.jpg" style="width: 20px; height: 20px" alt="Изображение кредитной карточки">
-      <img src="public/images/visa.jpg" style="width: 20px; height: 20px" alt="Изображение кредитной карточки">
+      <img src="public/images/master.jpg" alt="Изображение кредитной карточки">
+      <img src="public/images/visa.jpg" alt="Изображение кредитной карточки">
+      <img src="public/images/visa.jpg" alt="Изображение кредитной карточки">
+      <img src="public/images/master.jpg" alt="Изображение кредитной карточки">
+      <img src="public/images/visa.jpg" alt="Изображение кредитной карточки">
     </div>
     <div class="social-buttons">
       <span class="social-buttons__title">Расскажите о нас друзьям</span>
-      <img src="public/images/vk.jpg" style="width: 20px; height: 20px" alt="Ссылка на социальную сеть">
-      <img src="public/images/face.jpg" style="width: 20px; height: 20px" alt="Ссылка на социальную сеть">
-      <img src="public/images/ok.jpg" style="width: 20px; height: 20px" alt="Ссылка на социальную сеть">
-      <img src="public/images/table.jpg" style="width: 20px; height: 20px" alt="Ссылка на социальную сеть">
-      <img src="public/images/twit.jpg" style="width: 20px; height: 20px" alt="Ссылка на социальную сеть">
+      <img src="public/images/vk.jpg" alt="Ссылка на социальную сеть">
+      <img src="public/images/face.jpg" alt="Ссылка на социальную сеть">
+      <img src="public/images/ok.jpg" alt="Ссылка на социальную сеть">
+      <img src="public/images/table.jpg" alt="Ссылка на социальную сеть">
+      <img src="public/images/twit.jpg" alt="Ссылка на социальную сеть">
     </div>
   </div>
 </footer>
